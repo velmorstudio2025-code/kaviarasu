@@ -699,36 +699,96 @@
           .hero-desc{margin-inline:auto}
           .hero-btns{justify-content:center}
           .hero-stats{justify-content:center}
-          .tl-container::before{left:2px;transform:none}
+          
+          /* ═══ FIXED TIMELINE MOBILE ═══ */
+          .tl-container{
+            padding:0 0.5rem;
+            overflow:hidden;
+          }
+          .tl-container::before{
+            left:16px;
+            transform:none;
+          }
           .tl-row{
-                    display:flex;
-                    flex-direction:column;
-                
-                    width:100%;
-                
-                    margin-bottom:2rem;
-                }
-          .tl-row.left,.tl-row.right{justify-content:flex-start;transform:translateX(-20px)}
-          .tl-row.visible{transform:translateX(0)}
-          .tl-row::after{left:20px;top:0}
-            .tl-box{
-                width:calc(100% - 45px);
-                margin-left:45px;
-                padding:0;
-            }
-          .tl-connector{display:none}
-          .tl-row.left .tl-card,.tl-row.right .tl-card{border-left:3px solid var(--c1)!important;border-right:none!important}
-            
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            margin-bottom:2rem;
+            padding-left:0;
+            position:relative;
+          }
+          .tl-row.left,
+          .tl-row.right{
+            justify-content:flex-start;
+            transform:translateX(0);
+          }
+          .tl-row.visible{
+            transform:translateX(0);
+          }
+          .tl-row::after{
+            left:16px;
+            top:1.2rem;
+            width:16px;
+            height:16px;
+            transform:translate(-50%,-50%);
+          }
+          .tl-box{
+            width:100%;
+            max-width:100%;
+            margin-left:32px;
+            padding-right:0.5rem;
+            box-sizing:border-box;
+            text-align:left !important;
+          }
+          .tl-row.left .tl-box{
+            text-align:left !important;
+          }
+          .tl-row.right .tl-box{
+            text-align:left !important;
+          }
+          .tl-connector{
+            display:none !important;
+          }
+          .tl-row.left .tl-card,
+          .tl-row.right .tl-card{
+            border-left:3px solid var(--c1) !important;
+            border-right:none !important;
+            border-radius:18px 18px 18px 18px;
+            padding:1.25rem;
+            width:100%;
+            box-sizing:border-box;
+          }
+          .tl-year-badge{
+            font-size:0.6rem;
+            padding:0.15rem 0.65rem;
+          }
+          .tl-event{
+            font-size:0.9rem;
+          }
+          .tl-org{
+            font-size:0.7rem;
+          }
+          .tl-desc{
+            font-size:0.78rem;
+          }
+          .tl-badge{
+            font-size:0.6rem;
+            padding:0.2rem 0.6rem;
+          }
+          .timeline-actions{
+            margin-top:0.5rem;
+          }
+          .show-more-btn{
+            padding:0.7rem 1.4rem;
+            font-size:0.8rem;
+          }
+          
           .contact-grid{grid-template-columns:1fr}
           .form-row{grid-template-columns:1fr}
           section{padding:5rem 1.25rem}
           .proj-grid{grid-template-columns:1fr}
           #scrollLines{opacity:var(--scroll-lines-opacity,0.06)}
           #scrollLines::before{background-size:100% 150px,150px 100%}
-        }
-        @media(max-width:480px){
-          #scrollLines{opacity:var(--scroll-lines-opacity,0.05)}
-          #scrollLines::before{background-size:100% 180px,180px 100%}
         }
     </style>
 </head>
