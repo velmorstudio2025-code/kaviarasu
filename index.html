@@ -711,18 +711,10 @@
           .tl-row.left,.tl-row.right{justify-content:flex-start;transform:translateX(-20px)}
           .tl-row.visible{transform:translateX(0)}
           .tl-row::after{left:20px;top:0}
-          .tl-box{
-                width:100%;
-                max-width:100%;
-                min-width:0;
-                flex:1;
-            
-                padding-left:38px;
-                padding-right:0;
-            
-                box-sizing:border-box;
-            
-                text-align:left!important;
+            .tl-box{
+                width:calc(100% - 45px);
+                margin-left:45px;
+                padding:0;
             }
           .tl-connector{display:none}
           .tl-row.left .tl-card,.tl-row.right .tl-card{border-left:3px solid var(--c1)!important;border-right:none!important}
